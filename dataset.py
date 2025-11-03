@@ -104,7 +104,7 @@ def create_dataset(batch_size: int) -> tuple:
         card_labels[idx] = float(data['card'][i])
         idx += 1
 
-    features_tensor = torch.convert_to_tensor(features)
-    action_labels_tensor = torch.convert_to_tensor(action_labels)
-    card_labels_tensor = torch.convert_to_tensor(card_labels)
+    features_tensor = torch.from_numpy(features)
+    action_labels_tensor = torch.from_numpy(action_labels)
+    card_labels_tensor = torch.from_numpy(card_labels)
     return features_tensor, action_labels_tensor, card_labels_tensor

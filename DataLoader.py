@@ -4,7 +4,6 @@ import os
 import pandas as pd
 import numpy as np
 
-
 def dataframe(train_path: str):
     """
     Args:
@@ -76,4 +75,6 @@ def dataframe(train_path: str):
                     cnt = cnt + 1
                 if cnt == 2:
                     cont = False
+    data['Offence'] = data['Offence'].map(lambda x: 1.0 if x == 'Offence' else 0.0)
+    data['card'] = data['Severity'].astype(np.float64) * data['Offence']
     return data

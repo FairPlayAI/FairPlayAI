@@ -163,4 +163,4 @@ This project was developed by:
 *   [AliNowia](https://github.com/AliNowia)
 *   [Moaz715](https://github.com/Moaz715)
 *   [LowkeyAhmed](https://github.com/LowkeyAhmed)
-
+*   [0-mazooon-0](https://github.com/0-mazooon-0)

@@ -1,12 +1,12 @@
 # FairPlayAI: Multi-View Video Transformer for Football Foul Analysis
 
-## 🎯 Project Goal and Overview
+## Project Goal and Overview
 
 **FairPlayAI** is an advanced deep learning solution engineered to provide objective, data-driven analysis of foul events in football (soccer). The system leverages a **Multi-View Video Transformer (MViT)** architecture to process video streams captured from multiple camera perspectives of the same action. The primary function is to accurately predict two critical outcomes: the **Action Class** (type of foul) and the corresponding **Card Severity** (e.g., No card, Yellow card, Red card).
 
 This project serves as a robust proof-of-concept, integrating a state-of-the-art multi-view deep learning model, trained on the **SoccerNet** dataset, with a user-friendly desktop application built using **PyQt6** for practical, real-time inference.
 
-## ✨ Core Technical Features
+## Core Technical Features
 
 The architecture is designed for high performance and multi-modal data fusion:
 
@@ -16,7 +16,7 @@ The architecture is designed for high performance and multi-modal data fusion:
 *   **Dual-Head Classification:** The model features two independent classification heads, enabling simultaneous prediction of the fine-grained **Action Class** (8 categories) and the official **Card Severity** (4 categories).
 *   **PyQt6 Desktop Interface:** A standalone, cross-platform graphical user interface (GUI) is provided for easy video file selection, model execution, and clear visualization of the prediction probabilities.
 
-## ⚙️ Deep Learning Architecture
+## Deep Learning Architecture
 
 The system's core is the **Multi-View Network (MVNetwork)**, which extends the MViT-V2-S model for multi-view input processing.
 
@@ -50,7 +50,7 @@ The model is trained to classify actions into the following discrete categories:
 | **Card Severity** (4 Classes) | `No card`, `Yellow card`, `Red card`, `Yellow->Red card` |
 | **Action Class** (8 Classes) | `Tackling`, `Standing tackling`, `High leg`, `Holding`, `Pushing`, `Elbowing`, `Challenge`, `Dive` |
 
-## 📦 Data Pipeline and Preprocessing
+## Data Pipeline and Preprocessing
 
 The data pipeline is responsible for transforming raw SoccerNet annotations and video files into the multi-view tensor format required by the MViT model.
 
@@ -77,7 +77,7 @@ The `frames_extract` function handles the conversion of video clips into the req
 3.  **Normalization:** Frames are converted to RGB, scaled to the range $[0, 1]$, and then standardized using the **ImageNet mean and standard deviation**. This is crucial for leveraging the pre-trained weights of the MViT backbone.
 4.  **Final Tensor Shape:** The output for a single view is a PyTorch tensor of shape **(C, T, H, W)**, or **(3, 16, 224, 224)**.
 
-## 🛠️ Installation and Setup
+## Installation and Setup
 
 ### Prerequisites
 
@@ -116,7 +116,7 @@ The project requires a Python 3.x environment with the following key dependencie
     TRAIN_PATH = "/path/to/your/soccernet/data/train/" 
     ```
 
-## 🚀 Usage and Inference
+## Usage and Inference
 
 ### Running the Desktop Application
 
@@ -143,7 +143,7 @@ results = predict(VIDEO_PATH)
 # Example output: ['Yellow card: 95.20%', 'Tackling: 88.50%']
 ```
 
-## 📂 Project Structure Reference
+## Project Structure Reference
 
 | File/Directory | Description |
 | :--- | :--- |
@@ -163,3 +163,4 @@ This project was developed by:
 *   [AliNowia](https://github.com/AliNowia)
 *   [Moaz715](https://github.com/Moaz715)
 *   [LowkeyAhmed](https://github.com/LowkeyAhmed)
+
